@@ -1,0 +1,22 @@
+{
+  "name": "cuoam-documentation",
+  "version": "1.0.0",
+  "description": "Project Documentation Site Files",
+  "homepage": "https://github.com/lvingonzales/cuoam-documentation#readme",
+  "bugs": {
+    "url": "https://github.com/lvingonzales/cuoam-documentation/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lvingonzales/cuoam-documentation.git"
+  },
+  "license": "ISC",
+  "author": "Liam Gonzales",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {},
+  "dependencies": {
+    "ejs": "^5.0.2",
+    "express": "^5.2.1"
+  }
+}
