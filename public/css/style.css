@@ -1,0 +1,26 @@
+/* Variables */
+:root {
+  --bg: #f8f9fa;
+  --text: #272d2d;
+  --primary: #0090c1;
+  --secondary: #028090;
+  --success: #519872;
+  --danger: #bc2c1a;
+  --warning: #ffb140;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #272d2d;
+    --text: #f8f9fa;
+  }
+}
+
+nav .navbar-nav .nav-item {
+  background-color: transparent;
+  transition: background-color 0.2s ease-in;
+}
+
+nav .navbar-nav .nav-item:hover {
+  background-color: var(--success);
+}

@@ -12,6 +12,11 @@ app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
 
+// Serve static files from the "public" directory
+app.use(express.static('public/css'));
+app.use(express.static('public/images'));
+app.use(express.static('public/js'));
+
 // Routing
 app.get('/', (req, res) => {
   res.render('index', { title: 'Home' });
