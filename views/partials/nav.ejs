@@ -1,0 +1,42 @@
+<nav
+  class="col-lg-auto align-items-start border-end navbar mx-3 d-flex flex-column"
+>
+  <button class="navbar-toggle btn">
+    <span class="navbar-toggle-icon">
+      <i class="bi bi-arrow-bar-right"></i>
+    </span>
+  </button>
+  <div
+    class="socials-logo-container w-100 row justify-content-center d-flex flex-row"
+  >
+    <a
+      href="https://github.com/lvingonzales"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="logo-link w-auto"
+    >
+      <i class="bi bi-github"></i>
+    </a>
+    <a
+      href="https://www.linkedin.com/in/liamvingonzales/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="logo-link w-auto"
+    >
+      <i class="bi bi-linkedin"></i>
+    </a>
+    <a
+      href="mailto:lvingonzales15@gmail.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="logo-link w-auto"
+    >
+      <i class="bi bi-envelope-at-fill"></i>
+    </a>
+  </div>
+  <ul class="navbar-nav flex-grow-1">
+    <%- navLink('/', 'Home') %> <%- navLink('/concept', 'Concept') %> <%-
+    navLink('/art', 'Art') %> <%- navLink('/technical_info', 'Technical Info')
+    %> <%- navLink('/about', 'About') %>
+  </ul>
+</nav>

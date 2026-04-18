@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="<%= theme %>">
+  <%- include('partials/head') %>
+  <body class="container-fluid d-flex flex-column">
+    <%- include('partials/themebutton') %> <%- include('partials/header') %>
+    <main class="container px-5 flex-grow-1">
+      <div class="row h-100">
+        <%- include('partials/nav') %>
+        <section class="body col">
+          <h2>Concept</h2>
+          <p>
+            The Idea for Clean Up on Aisle Me is one I have had for years, in
+            fact its original design document was used as a portfolio piece for
+            my undergrad application. I wanted to create a small game that I
+            thought of as simple silly fun.
+          </p>
+          <p>
+            In my final year of undergrad, the opportunity came in my thesis
+            course, as I decided to try and bring the game to life with a focus
+            on the shader system that would allow me to paint the players based
+            on what they were hit by.
+          </p>
+          <h2>Game Bible Excerpts</h2>
+          <div class="row">
+            <img class="col h-auto" src="game-bible01.avif" />
+            <img class="col h-auto" src="game-bible02.avif" />
+            <img class="col h-auto" src="game-bible03.avif" />
+          </div>
+        </section>
+      </div>
+    </main>
+    <%- include('partials/footer') %>
+  </body>
+</html>

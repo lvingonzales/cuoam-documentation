@@ -1,0 +1,125 @@
+/* Variables */
+:root {
+  --primary: #0090c1;
+  --secondary: #028090;
+  --success: #519872;
+  --danger: #bc2c1a;
+  --warning: #ffb140;
+}
+
+[data-theme="light"] {
+  --bg: #f8f9fa;
+  --text: #272d2d;
+}
+
+[data-theme="dark"] {
+  --bg: #272d2d;
+  --text: #f8f9fa;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  height: 100vh;
+  transition: background-color, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+}
+
+.body {
+  overflow: scroll;
+}
+
+nav .navbar-nav .nav-item {
+  background-color: transparent;
+}
+
+nav .navbar-nav .nav-item a.nav-link {
+  color: var(--text);
+}
+
+nav .navbar-nav .nav-item:hover,
+nav .navbar-nav .nav-item:has(> a.active[aria-current="page"]) {
+  background-color: var(--success);
+}
+
+nav .navbar-nav .nav-item a.nav-link.active[aria-current="page"],
+nav .navbar-nav .nav-item a.nav-link:hover {
+  color: white;
+}
+
+nav .socials-logo-container a.logo-link {
+  font-size: 1.75rem;
+  color: var(--text);
+}
+
+nav .socials-logo-container a.logo-link:hover {
+  color: var(--success);
+}
+
+nav .navbar-toggle {
+  display: none;
+}
+
+.btn.theme-toggle {
+  font-size: 1.75rem;
+  color: var(--text);
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+@media only screen and (max-width: 992px) {
+  body:has(nav.active) {
+    overflow: hidden;
+  }
+
+  nav.navbar {
+    position: fixed;
+    background-color: var(--bg);
+    top: 0;
+    left: 0;
+    height: 100%;
+    max-width: 80vw;
+    transform: translateX(-80vw);
+    transition: transform;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  nav .navbar-nav .nav-item,
+  nav .navbar-nav {
+    width: 100%;
+  }
+
+  nav.navbar.active {
+    transform: translateX(0%);
+  }
+
+  nav .navbar-toggle {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+
+  nav .navbar-toggle .navbar-toggle-icon i {
+    color: var(--text);
+    font-size: 2rem;
+  }
+
+  nav .navbar-toggle .navbar-toggle-icon i::before {
+    transform: rotate(0deg);
+    transition: transform;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  nav.active .navbar-toggle .navbar-toggle-icon i {
+    color: var(--danger);
+  }
+
+  nav.active .navbar-toggle .navbar-toggle-icon i::before {
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="<%= theme %>">
+  <%- include('partials/head') %>
+  <body class="container-fluid d-flex flex-column">
+    <%- include('partials/themebutton') %> <%- include('partials/header') %>
+    <main class="container px-5 flex-grow-1">
+      <div class="row h-100">
+        <%- include('partials/nav') %>
+        <section class="body col">
+          <h2>About Me</h2>
+          <p>
+            My name is Liam Gonzales, I am a Jamaican software developer who
+            will graduate from the Ontario College of Art and Design University
+            in 2026. I originally attended the University of the West Indies in
+            my home country, but decided to transfer in order to pursue a career
+            in Game Development.
+          </p>
+          <p>
+            These days most of my work involves freelance web development, but I
+            haven't given up on my dream as I continue to design games in my
+            free time.
+          </p>
+        </section>
+      </div>
+    </main>
+    <%- include('partials/footer') %>
+  </body>
+</html>

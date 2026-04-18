@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="<%= theme %>">
+  <%- include('partials/head') %>
+  <body class="container-fluid d-flex flex-column">
+    <%- include('partials/themebutton') %> <%- include('partials/header') %>
+    <main class="container px-5 flex-grow-1">
+      <div class="row h-100">
+        <%- include('partials/nav') %>
+        <section class="body col">
+          <div class="image-container container-md">
+            <img class="w-100 h-auto mb-3" src="CUOAM-main.avif" alt="" />
+          </div>
+          <h2>Introduction</h2>
+          <p>
+            Clean up on Aisle Me is a 2.5D top down shoot-em-up where 4 players
+            run around a supermarket produce section picking up fruits and
+            throwing them at each other in an attempt to be the person with the
+            least food debris on them by closing time.
+          </p>
+          <p>
+            Four players enter a supermarket produce section and after a short
+            countdown, are let loose to grab as much food as they can carry to
+            throw at their all white wearing opponents. Getting hit stains your
+            clothes to varying degrees based on the fruit with some fruits
+            applying effects to their targets like stuns, slows and poisons.
+          </p>
+          <p>
+            Empty shelves pick a single random fruit to stock after a short
+            cooldown, allowing players to pick up a set amount of that fruit
+            based on its weight. Players' baskets can hold two instances of any
+            fruit at a time with the first fruit they picked up being the first
+            one to be thrown.
+          </p>
+          <p>
+            Players hit by fruits show visual signs of being hit through
+            “stains” (blotches that appear on the sprite) and have that fruits
+            point value added to their total. These point values are compared
+            against each other at the end of the round and the player with the
+            lowest score is the winner of the round.
+          </p>
+        </section>
+      </div>
+    </main>
+    <%- include('partials/footer') %>
+  </body>
+</html>
