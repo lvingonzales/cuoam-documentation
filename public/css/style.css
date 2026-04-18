@@ -69,13 +69,29 @@ nav .navbar-toggle {
   right: 0.5rem;
 }
 
+body .screen-overlay {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000075;
+}
+
 @media only screen and (max-width: 992px) {
   body:has(nav.active) {
     overflow: hidden;
   }
 
+  body:has(nav.active) .screen-overlay {
+    display: block;
+  }
+
   nav.navbar {
     position: fixed;
+    z-index: 15;
     background-color: var(--bg);
     top: 0;
     left: 0;

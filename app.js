@@ -1,5 +1,6 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
+const path = require('path');
 
 // Set up Express app
 const app = express();
@@ -9,6 +10,7 @@ const port = process.env.PORT || 3000;
 app.locals.validRoutes = ['/', '/concept', '/art', '/technical_info', '/about'];
 
 // Set the view engine to EJS
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // Start the server
@@ -17,9 +19,7 @@ app.listen(port, () => {
 });
 
 // Serve static files from the "public" directory
-app.use(express.static('public/css'));
-app.use(express.static('public/images'));
-app.use(express.static('public/js'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Use cookie parser middleware
 app.use(cookieParser());
