@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="<%= theme %>">
   <%- include('partials/head') %>
-  <body>
-    <%- include('partials/header') %>
-    <main class="container px-5">
-      <div class="row">
+  <body class="container-fluid d-flex flex-column">
+    <%- include('partials/themebutton') %> <%- include('partials/header') %>
+    <main class="container px-5 flex-grow-1">
+      <div class="row h-100">
         <%- include('partials/nav') %>
         <section class="body col">
+          <div class="image-container container-md">
+            <img class="w-100 h-auto mb-3" src="CUOAM-main.avif" alt="" />
+          </div>
           <h2>Introduction</h2>
           <p>
             Clean up on Aisle Me is a 2.5D top down shoot-em-up where 4 players
@@ -35,8 +38,6 @@
             against each other at the end of the round and the player with the
             lowest score is the winner of the round.
           </p>
-
-          <img src="#" alt="" />
         </section>
       </div>
     </main>

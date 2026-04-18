@@ -14,8 +14,11 @@
   "author": "Liam Gonzales",
   "type": "commonjs",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
+    "cookie-parser": "^1.4.7",
     "ejs": "^5.0.2",
     "express": "^5.2.1"
   }

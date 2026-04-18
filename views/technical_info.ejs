@@ -1,11 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="<%= theme %>">
   <%- include('partials/head') %>
-  <body>
-    <%- include('partials/header') %>
-    <main>
-      <%- include('partials/nav') %>
-      <section class="body"></section>
+  <body class="container-fluid d-flex flex-column">
+    <%- include('partials/themebutton') %> <%- include('partials/header') %>
+    <main class="container px-5 flex-grow-1">
+      <div class="row h-100">
+        <%- include('partials/nav') %>
+        <section class="body col">
+          <h2>Technical Information</h2>
+          <div class="text-section border-bottom mb-4">
+            <h3>Player</h3>
+            <h5>Controllers</h5>
+            <p>
+              I used Unity’s new Input System package to manage keybinds and to
+              add and remove players/ controllers using a combination of the
+              built in Player Input Manager and some custom code. This code
+              detects new controllers via a button press and distinguishes
+              between a keyboard and a gamepad.
+            </p>
+            <h5>Movement</h5>
+            <p>
+              The movement made use of the AddForce function and attached
+              physics system. A lot of trial and error went into making sure the
+              movement didn't feel too rigid or too slippery, that way the
+              effects that would alter these values would feel a lot more
+              Impactful.
+            </p>
+            <h5>Aiming</h5>
+            <p>
+              I created a very basic aim arrow and used a shader to check what
+              index the attached player was on instantiation. The arrow shader
+              would then recolour the white pixels on the sprite to the color in
+              the same index as the player.
+            </p>
+            <p>
+              Through a set of functions that retrieve the direction a player is
+              aiming, or the position of their mouse depending on the
+              appropriate control scheme, the position and the rotation of the
+              aim arrow was updated. These same functions are used by the throw
+              function to determine the direction and rotation of the fruit.
+            </p>
+            <h5>Throwing</h5>
+            <p>
+              Each player has an attached “basket” capable of holding two
+              instances of fruit. Fruits when picked up are placed into a
+              primary fruit slot or, if that slot is full, a secondary fruit
+              slot. When throwing fruits, fruits in the primary slot are used
+              first and then once that has been depleted, fruits in the
+              secondary slot are shifted into the primary slot.
+            </p>
+            <p>
+              Players have a max ammo capacity of 6, each fruit has a set ammo
+              weighting which the aforementioned capacity is divided by to
+              determine how many individual fruits the player has.
+            </p>
+            <p>
+              E.g. Watermelon has a weight of 6 so a player can only hold 1, and
+              tomato has a weight of 1 so a player can hold 6.
+            </p>
+            <p>
+              The contents of each slot is not affected by the max ammo capacity
+              so although a player will only be able to hold a single
+              watermelon, they can still carry another fruit regardless of its
+              weight.
+            </p>
+            <h5>Score</h5>
+            <p>
+              Each player has an attached score value starting at 0, being hit
+              by projectiles increases this score depending on the fruit and at
+              the end of the game, this score is used to determine the winner
+              and loser of the round depending on the player with the lowest and
+              highest score respectively.
+            </p>
+          </div>
+          <div class="text-section">
+            <h3>Projectiles</h3>
+            <p>
+              Each fruit has a set of data that determines its weight, point
+              value and associated effect. Shelves draw a random fruit from a
+              list of all the fruits to stock and players can pick up and throw
+              these fruits applying their own specific point values and effects.
+            </p>
+            <span>Effects (currently) include: </span>
+            <ul>
+              <li>
+                Stun: Player is unable to move for a period of about 2 seconds.
+              </li>
+              <li>Slippery: Player has their friction reduced by about 50%.</li>
+              <li>
+                Staining: Player takes a damage over time for a duration of
+                about 2 seconds.
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
     </main>
     <%- include('partials/footer') %>
   </body>

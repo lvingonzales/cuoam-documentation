@@ -1,11 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="<%= theme %>">
   <%- include('partials/head') %>
-  <body>
-    <%- include('partials/header') %>
-    <main>
-      <%- include('partials/nav') %>
-      <section class="body"></section>
+  <body class="container-fluid d-flex flex-column">
+    <%- include('partials/themebutton') %> <%- include('partials/header') %>
+    <main class="container px-5 flex-grow-1">
+      <div class="row h-100">
+        <%- include('partials/nav') %>
+        <section class="body col">
+          <h2>Art Direction</h2>
+          <p>
+            Skill wise, I lean far more towards the technical side, but I wanted
+            to try my hand at creating some simple 2D visuals for the game. To
+            that end, all of the sprite work in the game is done entirely by me.
+            Some of it came out great but others not as much. Here's a few
+            highlights:
+          </p>
+          <div class="img-container">
+            <img class="img-btn-frame w-100" src="ButtonFrame.png" />
+          </div>
+          <div class="images-container row row-cols-3">
+            <img src="Banana.png" alt="" class="col img-fluid h-auto" />
+            <img src="Basket.png" alt="" class="col img-fluid h-auto" />
+            <img src="MelonPile.png" alt="" class="col img-fluid h-auto" />
+            <img src="NewTiles.png" alt="" class="col img-fluid h-auto" />
+            <img src="Player.png" alt="" class="col img-fluid h-auto" />
+            <img src="Shelf.png" alt="" class="col img-fluid h-auto" />
+            <img src="tomato.png" alt="" class="col img-fluid h-auto" />
+            <img src="watermelon.png" alt="" class="col img-fluid h-auto" />
+          </div>
+        </section>
+      </div>
     </main>
     <%- include('partials/footer') %>
   </body>
